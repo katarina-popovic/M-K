@@ -38,39 +38,36 @@
   <ItemGroup>
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\EditorPluginInterop.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\UnitTesting\TestEvent.cs" />
+     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Discovery.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\UnitTesting\TestsCallback.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\GUIDProvider.cs" />
+     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\UnitTesting\CallbackInitializer.cs" />
+     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Util\SerializableVersion.cs" />
+     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\IGUIDGenerator.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\RiderFileSystemWatcher.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Util\LibcNativeInterop.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\UnitTesting\SyncTestRunEventsHandler.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\UnitTesting\CallbackData.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\RiderScriptEditor.cs" />
+     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\ProjectGeneration.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\FileIOProvider.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\SolutionGuidGenerator.cs" />
+     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\IAssemblyNameProvider.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\IGenerator.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\UnitTesting\RiderTestRunner.cs" />
+     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Util\RiderMenu.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\RiderScriptEditorData.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\UnitTesting\SyncTestRunCallback.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\ProjectGenerationFlag.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Util\CommandLineParser.cs" />
+     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\LoggingLevel.cs" />
+     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\PluginSettings.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Properties\AssemblyInfo.cs" />
+     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\PostProcessors\RiderAssetPostprocessor.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\RiderInitializer.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Util\FileSystemUtil.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\AssemblyNameProvider.cs" />
      <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\IFileIO.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Discovery.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\ProjectPart.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Util\RiderPathUtil.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\UnitTesting\CallbackInitializer.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Util\SerializableVersion.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\IGUIDGenerator.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\ProjectGeneration.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration\IAssemblyNameProvider.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Util\RiderMenu.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\RiderStyles.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\LoggingLevel.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\PluginSettings.cs" />
-     <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\PostProcessors\RiderAssetPostprocessor.cs" />
      <None Include="Packages\com.unity.ide.rider\Rider\Editor\com.unity.ide.rider.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity 2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -307,7 +304,7 @@
         <HintPath>C:\Program Files\Unity 2020.3.30f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>C:\Users\Milica\Desktop\M-K-main\M-K-Platform\M-K\M-K\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\Prepreke\M-K\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:\Program Files\Unity 2020.3.30f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -658,10 +655,10 @@
         <HintPath>C:\Program Files\Unity 2020.3.30f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:\Users\Milica\Desktop\M-K-main\M-K-Platform\M-K\M-K\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\Prepreke\M-K\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:\Users\Milica\Desktop\M-K-main\M-K-Platform\M-K\M-K\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\Prepreke\M-K\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
