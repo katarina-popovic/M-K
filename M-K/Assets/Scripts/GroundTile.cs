@@ -13,6 +13,7 @@ public class GroundTile : MonoBehaviour
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();    
         SpawnObstacle();
         SpawnCoins();
+        SpawnBananas();
     }
 
     private void OnTriggerExit (Collider other)
@@ -24,7 +25,6 @@ public class GroundTile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void SpawnObstacle()
@@ -60,5 +60,17 @@ public class GroundTile : MonoBehaviour
 
         point.y = 1;
         return point;
+    }
+
+    public GameObject bananaPrefab;
+
+    void SpawnBananas()
+    {
+        int bananasToSpawn = 1;
+        for (int i = 0; i < bananasToSpawn; i++)
+        {
+            GameObject temp = Instantiate(bananaPrefab, transform);
+            temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
+        }
     }
 }

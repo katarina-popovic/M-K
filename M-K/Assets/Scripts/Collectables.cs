@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Collectables : MonoBehaviour
 {
+    public AudioClip coinSound;
 
     public float turnSpeed = 90f;
 
@@ -23,6 +24,8 @@ public class Collectables : MonoBehaviour
 
         //Add to the player-s score
         GameManager.inst.IncrementScore();
+
+        AudioSource.PlayClipAtPoint(coinSound, transform.position);
 
         //Destroy this collectable object
         Destroy(gameObject);

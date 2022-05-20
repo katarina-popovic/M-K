@@ -16,6 +16,12 @@ public class GameManager : MonoBehaviour
         scoreText.text = "SCORE: " + score;
     }
 
+    public void IncrementBonus()
+    {
+        score += 5;
+        scoreText.text = "SCORE: " + score;
+    }
+
     private void Awake()
     {
         inst = this;

@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74a9c32b258c9a4b941ac4b59eeb183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 8300000, guid: 3c8e1b51a59b6da42b0823020f826bf1, type: 3}
   turnSpeed: 90
 --- !u!54 &-8844724163615412223
 Rigidbody:
