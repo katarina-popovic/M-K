@@ -14,8 +14,9 @@ public class PlayerMovement : MonoBehaviour
     float horizontalInput;
     public float horizontalMultiplier = 2;
     public float speedIncreasedPerPoint = 0.1f;
-    [SerializeField] float jumpForce = 0.001f;
-    [SerializeField] LayerMask groundMask;
+    //[SerializeField] float jumpForce = 0.001f;
+    //[SerializeField] LayerMask groundMask;
+    public int jumpHeight = 7;
 
     private void FixedUpdate(){
         
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -43,9 +45,13 @@ public class PlayerMovement : MonoBehaviour
             Die();
         }
 
-        //if(Input.GetKeyDown(KeyCode.Space)) {
-        //    Jump();
-        //}
+        if(Input.GetButtonDown("Jump")) {
+            rb.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
+        }
+
+        /*if(Input.GetKeyDown(KeyCode.Space)) {
+            Jump();
+        }*/
     }
 
     public void Die()
@@ -62,11 +68,11 @@ public class PlayerMovement : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    void Jump ()
+    /*void Jump ()
     {
         float height = GetComponent<Collider>().bounds.size.y;
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height/2) + 0.1f, groundMask);
 
         rb.AddForce(Vector3.up * jumpForce);
-    }
+    }*/
 }
