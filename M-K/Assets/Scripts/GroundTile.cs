@@ -10,15 +10,12 @@ public class GroundTile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();    
-        SpawnObstacle();
-        SpawnCoins();
-        SpawnBananas();
+        groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
     }
 
     private void OnTriggerExit (Collider other)
     {
-        groundSpawner.SpawnTile();
+        groundSpawner.SpawnTile(true);
         Destroy(gameObject, 2);    
     }
 
@@ -27,7 +24,7 @@ public class GroundTile : MonoBehaviour
     {
     }
 
-    void SpawnObstacle()
+    public void SpawnObstacle()
     {
         int obstacleSpawnIndex = Random.Range(2,5);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
@@ -37,7 +34,7 @@ public class GroundTile : MonoBehaviour
 
     public GameObject coinPrefab;
 
-    void SpawnCoins()
+    public void SpawnCoins()
     {
         int coinsToSpawn = 2;
         for (int i = 0; i < coinsToSpawn; i++)
@@ -64,7 +61,7 @@ public class GroundTile : MonoBehaviour
 
     public GameObject bananaPrefab;
 
-    void SpawnBananas()
+    public void SpawnBananas()
     {
         int bananasToSpawn = 1;
         for (int i = 0; i < bananasToSpawn; i++)

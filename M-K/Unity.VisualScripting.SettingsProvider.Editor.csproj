@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -36,14 +36,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Packages\com.unity.visualscripting\Editor\VSSettingsProvider\VSProjectSettingsProviderView.cs" />
-     <Compile Include="Packages\com.unity.visualscripting\Editor\VSSettingsProvider\VSSettingsCustomProperty.cs" />
-     <Compile Include="Packages\com.unity.visualscripting\Editor\VSSettingsProvider\VSSettingsTypeOption.cs" />
-     <Compile Include="Packages\com.unity.visualscripting\Editor\VSSettingsProvider\VSSettingsAssembly.cs" />
-     <Compile Include="Packages\com.unity.visualscripting\Editor\VSSettingsProvider\VSProjectSettingsProvider.cs" />
-     <Compile Include="Packages\com.unity.visualscripting\Editor\VSSettingsProvider\VSSettingsScriptReferenceResolver.cs" />
-     <Compile Include="Packages\com.unity.visualscripting\Editor\VSSettingsProvider\VSSettingsBackup.cs" />
-     <None Include="Packages\com.unity.visualscripting\Editor\VSSettingsProvider\Unity.VisualScripting.SettingsProvider.Editor.asmdef" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\SettingsProvider\ProjectSettingsProviderView.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\SettingsProvider\ProjectSettings\CustomPropertyProviderSettings.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\SettingsProvider\EditorPreferencesProvider.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\SettingsProvider\ProjectSettings\TypeOptionsSettings.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\SettingsProvider\ProjectSettings\AssemblyOptionsSettings.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\SettingsProvider\ProjectSettingsProvider.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\SettingsProvider\ProjectSettings\ScriptReferenceResolverSettings.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\SettingsProvider\EditorPreferencesProviderView.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\SettingsProvider\ProjectSettings\BackupSettings.cs" />
+     <None Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\SettingsProvider\Unity.VisualScripting.SettingsProvider.Editor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity 2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -279,31 +281,28 @@
         <HintPath>C:\Program Files\Unity 2020.3.30f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-        <HintPath>C:\Users\Milica\Downloads\M-K-main\M-K\Library\PackageCache\com.unity.collab-proxy@1.13.5\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\UI\M-K\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>C:\Users\Milica\Downloads\M-K-main\M-K\Library\PackageCache\com.unity.collab-proxy@1.13.5\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\UI\M-K\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
-        <HintPath>C:\Users\Milica\Downloads\M-K-main\M-K\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\UI\M-K\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-        <HintPath>C:\Users\Milica\Downloads\M-K-main\M-K\Library\PackageCache\com.unity.collab-proxy@1.13.5\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\UI\M-K\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
-        <HintPath>C:\Users\Milica\Downloads\M-K-main\M-K\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\UI\M-K\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-        <HintPath>C:\Users\Milica\Downloads\M-K-main\M-K\Library\PackageCache\com.unity.collab-proxy@1.13.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\UI\M-K\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>C:\Users\Milica\Downloads\M-K-main\M-K\Library\PackageCache\com.unity.visualscripting@1.7.2\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-        <HintPath>C:\Users\Milica\Downloads\M-K-main\M-K\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\UI\M-K\Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>C:\Users\Milica\Downloads\M-K-main\M-K\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\UI\M-K\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:\Program Files\Unity 2020.3.30f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -654,10 +653,10 @@
         <HintPath>C:\Program Files\Unity 2020.3.30f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:\Users\Milica\Downloads\M-K-main\M-K\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\UI\M-K\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:\Users\Milica\Downloads\M-K-main\M-K\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>C:\Users\Milica\Desktop\UI\M-K\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
